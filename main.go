@@ -8,11 +8,9 @@ import (
 )
 
 func main() {
-	testData := dataGenerator.StaticDataGenerator()
-	fmt.Println(dataGenerator.StaticDataGenerator())
 
-	sortedData := merge.BubbleSort(testData)
-	fmt.Println(sortedData)
+	testData := dataGenerator.RandomDataGenerator(5, 100)
+	fmt.Println(testData)
 
 	mergedData := merge.Merge(sortedData)
 	fmt.Println(mergedData)
