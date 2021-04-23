@@ -17,6 +17,7 @@ func RandomDataGenerator(arraySize int, numberSize int) [][]int {
 		a = rand.Intn(numberSize)
 		b = rand.Intn(numberSize)
 
+		// The first integer must be smaller than the second
 		if a < b {
 			testData = append(testData, []int{a, b})
 		} else {

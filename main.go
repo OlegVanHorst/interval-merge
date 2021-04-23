@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
 	"example.com/interval-merge/dataGenerator"
 	"example.com/interval-merge/merge"
@@ -9,9 +9,10 @@ import (
 
 func main() {
 
-	testData := dataGenerator.RandomDataGenerator(5, 100)
-	fmt.Println(testData)
+	testData := dataGenerator.RandomDataGenerator(5, 1000)
+	log.Printf("Generated Interval: %v\n", testData)
 
-	mergedData := merge.Merge(sortedData)
-	fmt.Println(mergedData)
+	mergedData := merge.Merge(testData)
+	log.Printf("Merged Interval: %v\n", mergedData)
+
 }
